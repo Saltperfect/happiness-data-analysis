@@ -1,0 +1,28 @@
+
+```{r}
+data_frame <- read.csv('2015.csv')
+# Removed country and Region as they are not related and the data calculated is in general
+corr_dat_frame <- correlate(select(df1, -Country, -Region))
+# Focusing on correlation with Happiness.Score
+corr_dat_frame <- corr_dat_frame[2:2,]
+# Removed garbage columns
+corr_dat_frame <- corr_dat_frame[c(-2,-3,-4,-11)]
+# Renaming Columns
+corr_dat_frame <- gather(corr_dat_frame, 'Factor', 'Pearson_relation_with_Happiness.Score')
+corr_dat_frame <- corr_dat_frame[-c(1),]
+corr_dat_frame$Pearson_relation_with_Happiness.Score <- as.numeric(corr_dat_frame$Pearson_relation_with_Happiness.Score) 
+corr_dat_frame$Factor <- factor(corr_dat_frame$Factor, levels = corr_dat_frame$Factor[order(corr_dat_frame$Pearson_relation_with_Happiness.Score)])
+
+
+```
+
+```{r}
+ggplot(aes(y= Pearson_relation_with_Happiness.Score, x = Factor), data= corr_dat_frame)+
+  geom_histogram(stat = 'identity', color = 'black', fill = 'pink', binwidth = 10)+
+  coord_flip()+
+  ggsave('2015.png')
+
+```
+
+
+
