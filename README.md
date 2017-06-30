@@ -1,6 +1,6 @@
 # happiness-data-analysis
 Analysis of World Happiness Report by  United Nations Sustainable Development Solutions Network.
-You can find the data [here]([https://www.kaggle.com/unsdsn/world-happiness)
+You can find the data [here](https://www.kaggle.com/unsdsn/world-happiness)
 
 Data is collected from people in over 150 countries. Each variable measured reveals a populated-weighted average score on a scale running from 0 to 10 that is tracked over time and compared against other countries. These variables currently include: real GDP per capita, social support, healthy life expectancy, freedom to make life choices, generosity, and perceptions of corruption.
 
