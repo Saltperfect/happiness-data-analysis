@@ -12,4 +12,4 @@ Also it can be seen that we are focusing on the correct areas as correlation is 
 
 
 
-![Conclusion](http://i.imgur.com/DJb4Jci.png)
+![Conclusion](http://i.imgur.com/LgITjMo.png)
